@@ -1,0 +1,32 @@
+.sectionWrapper {
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.authFormContainer {
+  background: rgba(13, 121, 231, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 30px;
+}
+
+.authForm {
+  width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.alternativeVariant {
+  color: #53539a;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.alternativeVariant:hover {
+  text-decoration: underline;
+}

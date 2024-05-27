@@ -1,0 +1,27 @@
+.workspace {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.upload {
+  cursor: pointer;
+  margin: 20px;
+  transition: ease-in-out;
+  transition-duration: 300ms;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.actionIcon {
+  font-size: 22px;
+  color: black;
+  transition: ease-in-out;
+  transition-duration: 300ms;
+}
+
+.actionIcon:hover {
+  opacity: 70%;
+  color: black;
+}
