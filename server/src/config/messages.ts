@@ -1,0 +1,23 @@
+export const messages = {
+  usernameLength: 'Username must be at least 4 characters long',
+  passwordLength: 'Password must be at least 9 characters long',
+  passwordOneLowerCase: 'Password must contain at least one lowercase letter',
+  passwordOneUpperCase: 'Password must contain at least one uppercase letter',
+  passwordOneNumber: 'Password must contain at least one number',
+  passwordOneSpecialChar:
+    'Password must contain at least one special character',
+  userNotFound: 'User not found',
+  invalidPassword: 'Invalid password',
+  avatarSaved: 'Avatar saved successfully',
+  avatarDeleted: 'Avatar deleted successfully',
+  errorGeneratingAvatar: 'Error generating avatar',
+  tokenRequired: 'Token is required',
+  invalidToken: 'Token invalid',
+  invalidTokenFormat: 'Invalid token format',
+  styleRequired: 'Style is required',
+  photoRequired: 'Photo is required',
+  userNotExist: 'User does not exist',
+  saveError: 'Save error',
+  errorGetAvatars: 'Error get avatars',
+  errorDeleteAvatars: 'Error delete avatars',
+};
