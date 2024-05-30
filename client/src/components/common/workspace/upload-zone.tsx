@@ -6,7 +6,7 @@ import generateAvatar from '@api/generate-avatar';
 import { imgLinkAtom, styleAtom } from '@store/workspace';
 import { UploadChangeParam } from 'antd/es/upload/interface';
 import { UploadOutlined } from '@ant-design/icons';
-import st from '@components/common/workspace/workspace.styles.module.scss';
+import st from '@components/common/workspace/workspace.module.scss';
 
 export default function UploadZone() {
   const [isUpload, setIsUpload] = useState<boolean>(true);

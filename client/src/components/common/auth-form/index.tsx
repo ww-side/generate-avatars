@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import {Button, Flex, Form, Input, message, Spin, Typography} from 'antd';
+import { Button, Flex, Form, Input, message, Spin, Typography } from 'antd';
 import {
   EyeInvisibleOutlined,
   EyeTwoTone,
@@ -13,8 +13,8 @@ import { authorizedAtom, usernameAtom } from '@store/user';
 import { passwordValidation } from '@utils/validators/password-validation';
 import { usernameSchema } from '@utils/validators/username.schema';
 import { httpErrorHandler } from '@utils/http-error-handler';
-import st from './auth-form.styles.module.scss';
-import {useState} from "react";
+import st from './auth-form.module.scss';
+import { useState } from 'react';
 
 export default function AuthForm({
   variant,
@@ -106,7 +106,13 @@ export default function AuthForm({
               />
             </Form.Item>
             <Button size="large" htmlType="submit" className={st.button}>
-              {isLoading ? <Spin /> : variant === 'signIn' ? 'Sign In Now' : 'Create an account'}
+              {isLoading ? (
+                <Spin />
+              ) : variant === 'signIn' ? (
+                'Sign In Now'
+              ) : (
+                'Create an account'
+              )}
             </Button>
           </Flex>
         </Form>

@@ -1,7 +1,7 @@
 import { type ReactNode } from 'react';
 import { Flex, Typography } from 'antd';
 import cx from 'classnames';
-import st from './section-item.styles.module.scss';
+import st from './section-item.module.scss';
 
 export default function SectionItem({
   children,

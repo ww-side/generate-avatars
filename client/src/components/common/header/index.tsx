@@ -5,7 +5,7 @@ import { useCookie } from '@hooks/useCookie';
 import { authorizedAtom, usernameAtom } from '@store/user';
 import { routes } from '@config/routes';
 import { menuItems } from '@data/menu-items';
-import st from './header.styles.module.scss';
+import st from './header.module.scss';
 
 export default function Header() {
   const username = useAtomValue(usernameAtom);

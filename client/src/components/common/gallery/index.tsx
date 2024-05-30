@@ -6,7 +6,7 @@ import getSavedAvatars from '@api/get-saved-avatars';
 import deleteSavedAvatar from '@api/delete-saved-avatar';
 import { httpErrorHandler } from '@utils/http-error-handler';
 import type { savedAvatarsType } from '@base/types/avatar';
-import st from './gallery.styles.module.scss';
+import st from './gallery.module.scss';
 
 export default function Gallery() {
   const [data, setData] = useState<savedAvatarsType[]>([]);

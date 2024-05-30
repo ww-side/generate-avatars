@@ -6,7 +6,7 @@ import { imgLinkAtom } from '@store/workspace';
 import { saveAvatar } from '@api/save-avatar';
 import { httpErrorHandler } from '@utils/http-error-handler';
 import { DownloadOutlined, SaveOutlined } from '@ant-design/icons';
-import st from './workspace.styles.module.scss';
+import st from './workspace.module.scss';
 
 export default function GeneratedAvatar() {
   const imgLink = useAtomValue(imgLinkAtom);
