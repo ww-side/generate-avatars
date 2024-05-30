@@ -9,13 +9,11 @@ export default function RootLayout() {
   const isAuthorized = useAtomValue(authorizedAtom);
 
   return (
-    <>
-      <Flex vertical={!isAuthorized} className={st.rootLayout}>
-        {isAuthorized && <Header />}
-        <section className={st.rootContent}>
-          <Outlet />
-        </section>
-      </Flex>
-    </>
+    <Flex vertical={!isAuthorized} className={st.rootLayout}>
+      {isAuthorized && <Header />}
+      <section className={st.rootContent}>
+        <Outlet />
+      </section>
+    </Flex>
   );
 }

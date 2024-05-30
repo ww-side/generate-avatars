@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Button, Flex, Form, Input, message, Typography } from 'antd';
+import {Button, Flex, Form, Input, message, Spin, Typography} from 'antd';
 import {
   EyeInvisibleOutlined,
   EyeTwoTone,
@@ -14,18 +14,22 @@ import { passwordValidation } from '@utils/validators/password-validation';
 import { usernameSchema } from '@utils/validators/username.schema';
 import { httpErrorHandler } from '@utils/http-error-handler';
 import st from './auth-form.styles.module.scss';
+import {useState} from "react";
 
 export default function AuthForm({
   variant,
 }: {
   variant: 'signIn' | 'signUp';
 }) {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const setUsername = useSetAtom(usernameAtom);
   const setIsAuthorized = useSetAtom(authorizedAtom);
   const { setCookie } = useCookie();
   const navigate = useNavigate();
 
   const onFinish = async (values: any) => {
+    setIsLoading(true);
+
     try {
       let res: any;
 
@@ -57,6 +61,8 @@ export default function AuthForm({
       console.log(res);
     } catch (e) {
       await httpErrorHandler(e);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -100,7 +106,7 @@ export default function AuthForm({
               />
             </Form.Item>
             <Button size="large" htmlType="submit" className={st.button}>
-              {variant === 'signIn' ? 'Sign In Now' : 'Create an account'}
+              {isLoading ? <Spin /> : variant === 'signIn' ? 'Sign In Now' : 'Create an account'}
             </Button>
           </Flex>
         </Form>

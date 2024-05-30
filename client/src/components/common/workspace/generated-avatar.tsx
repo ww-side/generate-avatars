@@ -2,9 +2,9 @@ import { Flex, message } from 'antd';
 import { useAtomValue } from 'jotai';
 import { Link } from 'react-router-dom';
 import SectionItem from '@components/ui/section-item';
+import { imgLinkAtom } from '@store/workspace';
 import { saveAvatar } from '@api/save-avatar';
 import { httpErrorHandler } from '@utils/http-error-handler';
-import { imgLinkAtom } from '@store/workspace';
 import { DownloadOutlined, SaveOutlined } from '@ant-design/icons';
 import st from './workspace.styles.module.scss';
 
@@ -24,11 +24,12 @@ export default function GeneratedAvatar() {
 
   return (
     <>
-      {imgLink && (
-        <SectionItem
-          title="Your avatar"
-          description="Save your avatar so you don't lose it!"
-        >
+      <SectionItem
+        title="Your avatar"
+        description="Save your avatar so you don't lose it!"
+        isBorderBottom={false}
+      >
+        {imgLink && (
           <Flex vertical align="center" gap="small">
             <img src={imgLink} alt="generated-img" width={300} height={300} />
             <Flex align="center" gap="middle">
@@ -41,8 +42,8 @@ export default function GeneratedAvatar() {
               </Link>
             </Flex>
           </Flex>
-        </SectionItem>
-      )}
+        )}
+      </SectionItem>
     </>
   );
 }

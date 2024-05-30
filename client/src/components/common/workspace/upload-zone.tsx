@@ -15,6 +15,7 @@ export default function UploadZone() {
 
   const customRequest = async (options: any) => {
     setIsUpload(false);
+
     const { onSuccess, onError, file } = options;
 
     const formData = new FormData();
